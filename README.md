@@ -48,21 +48,78 @@ cd 仓库名
 2. 在Cloudflare Pages选择"Upload assets"
 3. 上传文件并部署
 
-## 📋 广告设置
+## 📋 域名验证和广告设置
 
-### Servads验证
+### 🔐 Servads域名验证步骤
 
-1. 部署后访问：`https://你的域名/servads.txt`
-2. 确认验证码正确显示
-3. 在Servads后台提交域名验证
+要确保你的域名被验证并准备好显示广告，请按照以下简单步骤操作：
 
-### 广告位置
+#### 第1步：下载Tracker文件
 
-- **顶部横幅** - ad-top
-- **左侧边栏** - ad-left (桌面端)
-- **右侧边栏** - ad-right (桌面端)
-- **内容中间** - ad-middle
-- **底部横幅** - ad-bottom
+下载Servads提供的tracker文件。这个文件对于验证你的域名所有权至关重要。
+
+📥 [立即下载 servads.txt](./servads.txt)
+
+#### 第2步：上传Tracker文件
+
+将tracker文件上传到你域名服务器的根目录。根目录通常是你的主index文件所在的位置（例如：`public_html` 或网站文件的主文件夹）。
+
+**文件位置示例：**
+```
+你的网站根目录/
+├── index.html
+├── servads.txt  ← 上传到这里
+├── styles.css
+└── script.js
+```
+
+#### 第3步：通过浏览器检查文件
+
+打开网页浏览器并访问以下URL来确认文件可访问：
+
+```
+https://ads-seven-opal.vercel.app/servads.txt
+```
+
+确保文件在浏览器中可以查看并显示验证码。
+
+**注意：** 将 `ads-seven-opal.vercel.app` 替换为你的实际域名。
+
+#### 第4步：添加广告脚本到布局
+
+为了正确显示广告，请在你网站的 `<head>` 标签中或在 `</body>` 结束标签之前包含以下脚本标签：
+
+```html
+<script src="https://affiliates.serv.adse.site/assets/ads/ad.js" class="adScriptClass"></script>
+```
+
+**脚本位置示例：**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>你的网站</title>
+    <!-- 在head标签中添加广告脚本 -->
+    <script src="https://affiliates.serv.adse.site/assets/ads/ad.js" class="adScriptClass"></script>
+</head>
+<body>
+    <!-- 你的网站内容 -->
+</body>
+</html>
+```
+
+✅ **完成！** 完成这些步骤后，你的域名将被验证并准备好显示Servads广告。
+
+### 📍 广告位置
+
+本网站包含以下广告位：
+
+- **顶部横幅** - `ad-top`
+- **左侧边栏** - `ad-left` (仅桌面端)
+- **右侧边栏** - `ad-right` (仅桌面端)
+- **内容中间** - `ad-middle`
+- **底部横幅** - `ad-bottom`
 
 ## 🎨 网站功能
 
